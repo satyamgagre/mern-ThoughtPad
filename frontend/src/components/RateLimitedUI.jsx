@@ -12,32 +12,32 @@ const RateLimitedUi = () => {
   }, [countdown]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
-      <div className="max-w-xl w-full bg-white rounded-2xl shadow-lg border border-slate-200 p-8">
+    <div className="min-h-screen flex items-center justify-center bg-transparent p-4">
+      <div className="max-w-xl w-full bg-[#2d2433] rounded-2xl shadow-2xl border border-[#d4955b] p-8">
         <div className="flex items-start gap-4">
           {/* Icon */}
-          <div className="flex-shrink-0 bg-amber-100 rounded-full p-3">
-            <ZapIcon className="w-6 h-6 text-amber-600" />
+          <div className="flex-shrink-0 bg-[#d4955b] bg-opacity-20 rounded-full p-3 border border-[#d4955b]">
+            <ZapIcon className="w-6 h-6 text-[#d4955b]" />
           </div>
 
           {/* Content */}
           <div className="flex-1">
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">
+            <h2 className="text-2xl font-bold text-[#d4955b] mb-2">
               Rate Limit Reached
             </h2>
-            <p className="text-slate-600 mb-4">
+            <p className="text-[#b8a49b] mb-4">
               You've made too many requests. Please wait a moment before trying again.
             </p>
 
             {/* Countdown */}
             {countdown > 0 ? (
-              <div className="flex items-center gap-2 text-slate-700 bg-slate-50 rounded-lg px-4 py-3 mb-4">
-                <Clock className="w-5 h-5 text-slate-500" />
-                <span>Please wait <strong className="text-slate-900">{countdown}s</strong></span>
+              <div className="flex items-center gap-2 text-[#b8a49b] bg-[#1f1825] rounded-lg px-4 py-3 mb-4 border border-[#3d3142]">
+                <Clock className="w-5 h-5 text-[#d4955b]" />
+                <span>Please wait <strong className="text-[#d4955b]">{countdown}s</strong></span>
               </div>
             ) : (
-              <div className="text-green-600 font-medium mb-4">
-                ✓ Ready! You can try again now.
+              <div className="text-[#d4955b] font-medium mb-4 flex items-center gap-2">
+                <span className="text-xl">✓</span> Ready! You can try again now.
               </div>
             )}
 
@@ -46,10 +46,10 @@ const RateLimitedUi = () => {
               disabled={countdown > 0}
               onClick={() => window.location.reload()}
               className={`
-                w-full px-6 py-3 rounded-lg font-medium transition-colors
+                w-full px-6 py-3 rounded-lg font-medium transition-all duration-200
                 ${countdown > 0 
-                  ? 'bg-slate-200 text-slate-400 cursor-not-allowed' 
-                  : 'bg-slate-900 text-white hover:bg-slate-800'
+                  ? 'bg-[#3d3142] text-[#6d5f66] cursor-not-allowed border border-[#3d3142]' 
+                  : 'bg-[#d4955b] text-[#1a1a1a] hover:bg-[#e5a66c] border border-[#d4955b] hover:shadow-lg hover:shadow-[#d4955b]/20'
                 }
               `}
             >
