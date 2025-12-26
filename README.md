@@ -225,30 +225,6 @@ Built with a mobile-first approach, ThoughtPad works seamlessly across all devic
 
 ---
 
-## 🚢 Deployment
-
-### Deploy Backend (Render, Railway, or Heroku)
-
-1. Create a new web service
-2. Connect your GitHub repository
-3. Add environment variables
-4. Deploy!
-
-### Deploy Frontend (Vercel, Netlify, or Render)
-
-1. Create a new project
-2. Connect your GitHub repository
-3. Set build command: `npm run build`
-4. Set publish directory: `dist`
-5. Add environment variables
-6. Deploy!
-
-### Important: Update CORS Settings
-
-After deployment, update your backend's CORS configuration to allow requests from your frontend domain.
-
----
-
 ## 📖 Learning Resources
 
 This project covers:
@@ -264,24 +240,6 @@ This project covers:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
 ## 👨‍💻 Author
 
 **Your Name**
@@ -289,14 +247,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - GitHub: [@satyamgagre](https://github.com/satyamgagre)
 - LinkedIn: [Satyam Gagre](https://linkedin.com/in/satyamgagre)
 - Instagram: [@satya__gagre](https://instagram.com/satya__gagre)
-
----
-
-## 🙏 Acknowledgments
-
-- Design inspiration from modern note-taking apps
-- Built with ❤️ using the MERN Stack
-- Special thanks to the open-source community
 
 ---
 
