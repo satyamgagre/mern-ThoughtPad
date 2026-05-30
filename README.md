@@ -1,51 +1,51 @@
-<h1 align="center">📝 ThoughtPad ✨</h1>
-<parameter name="center">Your Digital Notebook</h3>
+<h1 align="center">ThoughtPad</h1>
+<h3 align="center">Your Digital Notebook</h3>
 
 <div align="center">
 
-[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Click_Here-success?style=for-the-badge)](https://mern-product-catalog-c8ha.onrender.com)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_App-success?style=for-the-badge)](https://mern-product-catalog-c8ha.onrender.com)
 
 </div>
 
 ---
 
-## 🌟 Highlights
+## Highlights
 
-- 🧱 Built with MERN Stack (MongoDB, Express, React, Node.js)
-- 📝 CRUD Notes App – Create, Read, Update & Delete notes
-- ⚙️ REST API with clean backend structure
-- 🎨 Modern & Responsive UI
-- 🚀 Production-ready with clear setup instructions
+- MERN stack notes app built with MongoDB, Express, React, and Node.js
+- Full CRUD flow for creating, reading, updating, and deleting notes
+- REST API with a clean backend structure
+- API protection with Redis-backed rate limiting
+- Responsive UI built for desktop and mobile screens
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <div align="center">
 
-### 🏠 Homepage
+### Homepage
 *View all your notes in an organized dashboard*
 
 ![Homepage View](/frontend/public/ThoughtPad-HomePage.png)
 
 ---
 
-### ➕ Create Note Page
+### Create Note Page
 *Add new notes with title and description*
 
 ![Create Note Page](/frontend/public/ThoughtPad-CreatePage.png)
 
 ---
 
-### ✏️ Update Note Page
+### Update Note Page
 *Edit and update your existing notes*
 
 ![Update Note Page](/frontend/public/ThoughtPad-DetailPage.png)
 
 ---
 
-### 📱 Responsive Design
-*Seamless experience across all devices*
+### Responsive Design
+*Use the app comfortably across screen sizes*
 
 ![Mobile View](/frontend/public/ThoughtPad-MobileView.jpg)
 
@@ -53,191 +53,101 @@
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-### Frontend
-- ⚛️ **React.js** - Modern UI Library
-- 🎨 **Tailwind CSS** - Utility-First CSS Framework
-- 🔄 **Axios** - HTTP Client for API Requests
-- 🎭 **React Icons** - Beautiful Icon Library
+**Frontend:** React, Tailwind CSS, Axios, React Icons
 
-### Backend
-- 🟢 **Node.js** - JavaScript Runtime
-- 🚂 **Express.js** - Web Application Framework
-- 🍃 **MongoDB** - NoSQL Database
-- 🔴 **Redis (Upstash)** - Rate Limiting & Caching
-- 🛡️ **Express Rate Limit** - API Protection
+**Backend:** Node.js, Express.js, MongoDB, Upstash Redis
 
-### Development Tools
-- 📦 **npm** - Package Manager
-- 🔧 **Nodemon** - Auto-Restart Development Server
-- 🎯 **ESLint** - Code Quality Tool
+**Tools:** npm, Nodemon, ESLint
 
 ---
 
-## ⚙️ Environment Variables Setup
+## Environment Variables
 
-### Backend Configuration (`/backend/.env`)
+Create `/backend/.env`:
 
 ```env
-# MongoDB Connection
 MONGO_URI=your_mongodb_connection_string
-
-# Upstash Redis Configuration
 UPSTASH_REDIS_REST_URL=your_upstash_redis_url
 UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
-
-# Application Environment
 NODE_ENV=development
-
-# Server Port (Optional)
 PORT=5000
 ```
 
-### Frontend Configuration (`/frontend/.env`)
+Create `/frontend/.env`:
 
 ```env
-# Backend API URL
 VITE_API_URL=http://localhost:5000/api
-
-# Or for production
-# VITE_API_URL=https://your-backend-url.com/api
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-Make sure you have the following installed:
-- **Node.js** (v16 or higher)
-- **npm** or **yarn**
-- **MongoDB** account (Atlas recommended)
-- **Upstash Redis** account
+- Node.js v16 or higher
+- npm or yarn
+- MongoDB Atlas or local MongoDB
+- Upstash Redis account
 
 ### Installation
 
-#### 1️⃣ Clone the Repository
-
 ```bash
-git clone https://github.com/yourusername/thoughtpad.git
-cd thoughtpad
+git clone https://github.com/satyamgagre/mern-ThoughtPad.git
+cd mern-ThoughtPad
 ```
 
-#### 2️⃣ Setup Backend
+Install and run the backend:
 
 ```bash
-# Navigate to backend directory
 cd backend
-
-# Install dependencies
 npm install
-
-# Create .env file and add your environment variables
-# (See Environment Variables Setup section above)
-
-# Start the development server
 npm run dev
 ```
 
-The backend server will start on `http://localhost:5000`
-
-#### 3️⃣ Setup Frontend
+Install and run the frontend:
 
 ```bash
-# Open a new terminal and navigate to frontend directory
 cd frontend
-
-# Install dependencies
 npm install
-
-# Create .env file and add your environment variables
-# (See Environment Variables Setup section above)
-
-# Start the development server
 npm run dev
 ```
 
-The frontend application will start on `http://localhost:5173`
+The frontend runs on `http://localhost:5173` and the backend runs on `http://localhost:5000`.
 
 ---
 
-## 📦 Available Scripts
-
-### Backend Scripts
-
-```bash
-npm run dev        # Start development server with nodemon
-npm start          # Start production server
-npm run build      # Build for production (if applicable)
-```
-
-### Frontend Scripts
-
-```bash
-npm run dev        # Start Vite development server
-npm run build      # Build for production
-npm run preview    # Preview production build
-npm run lint       # Run ESLint
-```
-
----
-
-## 🌐 API Endpoints
-
-### Notes Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `/api/notes` | Get all notes |
-| `GET` | `/api/notes/:id` | Get a single note by ID |
-| `POST` | `/api/notes` | Create a new note |
-| `PUT` | `/api/notes/:id` | Update an existing note |
+| `GET` | `/api/notes/:id` | Get one note |
+| `POST` | `/api/notes` | Create a note |
+| `PUT` | `/api/notes/:id` | Update a note |
 | `DELETE` | `/api/notes/:id` | Delete a note |
 
-### Rate Limiting
+---
 
-- **Limit:** 100 requests per 15 minutes per IP
-- **Response:** 429 Too Many Requests when limit exceeded
+## What I Learned
+
+This project helped me practice a complete MERN workflow, including API design, frontend/backend integration, environment-based configuration, and Redis-backed rate limiting to protect endpoints from excessive requests.
 
 ---
 
-## 📚 Key Features Explained
+## Author
 
-### ✅ CRUD Operations
-- **Create:** Add new notes with title and description
-- **Read:** View all notes or individual note details
-- **Update:** Edit existing notes with ease
-- **Delete:** Remove notes you no longer need
-
-### 🔐 Rate Limiting
-ThoughtPad implements rate limiting using **Upstash Redis** to prevent abuse and ensure fair usage. This protects the API from excessive requests and maintains optimal performance.
-
-### 📱 Responsive Design
-Built with a mobile-first approach, ThoughtPad works seamlessly across all devices. The UI adapts beautifully from smartphones to large desktop screens.
-
-### 🎨 Clean Architecture
-- Separation of concerns with MVC pattern
-- Modular and maintainable code structure
-- Centralized error handling
-- Environment-based configuration
-
----
-
-
-## 👨‍💻 Author
-
-**Your Name**
+**Satyam Gagre**
 
 - GitHub: [@satyamgagre](https://github.com/satyamgagre)
 - LinkedIn: [Satyam Gagre](https://linkedin.com/in/satyamgagre)
-- Instagram: [@satya__gagre](https://instagram.com/satya__gagre)
 
 ---
 
 <div align="center">
 
-**Made with 🤍 by [SA8YA](https://github.com/satyamgagre)**
+Made by [Satyam Gagre](https://github.com/satyamgagre)
 
 </div>
